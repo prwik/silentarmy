@@ -69,7 +69,7 @@ def parse_url(url):
         port = int(port)
     except ValueError as e:
         fatal('Invalid port number: %s' % port)
-    return (url[:colon], int(url[colon + 1:]), xnsub)
+    return (host, port, xnsub)
 
 def decode_solver_line(line):
     '''Decode a line read from the solver. 3 types of lines exist:
