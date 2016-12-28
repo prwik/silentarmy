@@ -8,8 +8,8 @@ This code is based on public domain code from Wei Dai's Crypto++ library. */
 #include "sha256.h"
 
 /* define it for speed optimization */
-/* #define _SHA256_UNROLL */
-/* #define _SHA256_UNROLL2 */
+#define _SHA256_UNROLL
+#define _SHA256_UNROLL2
 
 #define rotlFixed(x, n) (((x) << (n)) | ((x) >> (32 - (n))))
 #define rotrFixed(x, n) (((x) >> (n)) | ((x) << (32 - (n))))
